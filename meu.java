@@ -42,6 +42,20 @@ public class meu {
         return result;
     }
 
+    // ETAPA 5 - por código F(n) = 2 ∗ F(n − 1) + 3 ∗ F(n − 2).
+
+    public static int F(int x) {
+        if (x == 0) return 1;
+        if (x == 1) return 2;  
+        return 2 * F(x -   1) + 3 * F(x - 2);
+    }
+
+    // ETAPA 6 - Verifique se uma palavra é palíndromo
+    public static boolean verificarPalindromo(String palavra) {
+        String palavraInvertida = inverterString(palavra);
+        return palavra.equals(palavraInvertida);
+    }
+
 
 
         public static void main(String[] args) {
@@ -57,6 +71,13 @@ public class meu {
             String s = "Hello, World! ARARA";
             System.out.println("String original: " + s);
             System.out.println("String invertida: " + inverterString(s));
+            System.out.println("ETAPA 5");
+            int n = 5;
+            System.out.println("F(" + n + ") = " + F(n));
+            System.out.println("ETAPA 6");
+            String palavra = "araraX";
+            System.out.println("A palavra '" + palavra + "' e palindromo? " + verificarPalindromo(palavra));
+
        
        
         }
